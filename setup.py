@@ -8,6 +8,7 @@ setup(
     name="MkDocsJsonSchemaPlugin",
     version="0.0.1",
     description="MkDocs Plugin to parse json schemas.",
+    long_description_content_type="text/markdown",
     long_description=readme,
     keywords=["mkdocs", "plugin", "json", "schema"],
     author="Luke McKechnie",

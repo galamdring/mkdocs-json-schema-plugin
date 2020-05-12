@@ -13,4 +13,5 @@ Then add the following entry to the MkDocs config file:
 ```yml
 plugins:
   - json-schema
+    json_schema: ~filename~
 ```
