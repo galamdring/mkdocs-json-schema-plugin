@@ -15,3 +15,8 @@ plugins:
   - json-schema:
       json_schema: "docs/item.schema.json"
 ```
+
+In your target file, add a tag to be replaced
+```
+#JsonSchema#
+```
