@@ -6,7 +6,7 @@ with open("README.md") as f:
 
 setup(
     name="MkDocsJsonSchemaPlugin",
-    version="0.0.1",
+    version="0.0.2",
     description="MkDocs Plugin to parse json schemas.",
     long_description_content_type="text/markdown",
     long_description=readme,
