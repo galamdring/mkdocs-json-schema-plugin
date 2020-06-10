@@ -6,6 +6,7 @@ from mkdocs import plugins, config
 class JsonSchema(plugins.BasePlugin):
     config_scheme = (
         ('json_schema', config.config_options.Type(str, default='')),
+        ('markdown_tag', config.config_options.Type(str, default=''))
     )
 
     def __init__(self):
@@ -22,14 +23,14 @@ class JsonSchema(plugins.BasePlugin):
 
     def on_page_markdown(self, markdown, **kwargs):
         # we can assume the file was set, or it throws a validation error
-
-        if "#JsonSchema#" in markdown:
+        tag = self.config['markdown_tag']
+        if tag in markdown:
             file = self.config['json_schema']
             with open(file) as json_file:
                 data = json.load(json_file)
 
             new_markdown = self.markdown_for_items(data, "\t")
-            index = markdown.find("#JsonSchema#")
+            index = markdown.find(tag)
             if index == -1:
                 return
             before = markdown[0:index]

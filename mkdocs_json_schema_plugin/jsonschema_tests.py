@@ -1,5 +1,4 @@
 import unittest
-import json
 
 from mkdocs_json_schema_plugin import jsonschema
 
@@ -25,9 +24,4 @@ class JsonSchemaTests(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(warnings, [])
 
-    def test_event_on_markdown_defaults(self):
-        plugin = jsonschema.JsonSchema()
-        plugin.load_config({})
-        result = plugin.on_page_markdown("", {})
-        self.assertEqual(result, "")
 
