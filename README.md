@@ -12,8 +12,8 @@ Then add the following entry to the MkDocs config file:
 
 ```yml
 plugins:
-  - json-schema:
-      json_schema: "docs/item.schema.json"
+- json-schema:
+json_schema: "docs/item.schema.json"
 ```
 
 In your target file, add a tag to be replaced
